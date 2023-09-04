@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Weather Forecast App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Forecast App</h1>
+        <form method="POST">
+            <label for="country">Enter the country:</label>
+            <input type="text" id="country" name="country">
+            <button type="submit">Predict Yield Increase</button>
+        </form>
+        {% if result %}
+        <div class="result">
+            {{ result }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
